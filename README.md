@@ -70,7 +70,7 @@ docker-compose up -d
 
 ## Streama のバージョン
 
-この Dockerfile では、デフォルトで Streama バージョン `1.9.0` を使用しています。必要に応じて、`Dockerfile` 内の環境変数 `STREAMA_VERSION` を変更してください。  
+この Dockerfile では、デフォルトで Streama バージョン `v1.10.5` を使用しています。必要に応じて、`Dockerfile` 内の環境変数 `STREAMA_VERSION` を変更してください。  
 最新のリリースは [公式GitHubリリースページ](https://github.com/streamaserver/streama/releases) をご確認ください。
 
 ## 注意事項
