@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  streama:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      # PostgreSQL を利用するための環境変数
+      - DATABASE_DRIVER=org.postgresql.Driver
+      - DATABASE_URL=jdbc:postgresql://postgres:5432/streama
+      - DATABASE_USERNAME=streama
+      - DATABASE_PASSWORD=streama
+      # 必要に応じて Java オプションを設定
+      - JAVA_OPTS=-Xmx512m
+    volumes:
+      # ホストのディレクトリをコンテナ内の /app/data にマウント
+      - /path/to/your/local/folder:/app/data
+
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_DB: streama
+      POSTGRES_USER: streama
+      POSTGRES_PASSWORD: streama
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
