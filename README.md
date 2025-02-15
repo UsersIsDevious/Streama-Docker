@@ -5,7 +5,7 @@
 
 # Streama Docker コンテナ
 
-このリポジトリは、[Streama](https://streama-project.com/) を Docker 上で簡単に実行するための設定ファイル群を提供します。
+このリポジトリは、[Streama](https://docs.streama-project.com/) を Docker 上で簡単に実行するための設定ファイル群を提供します。
 
 ## 特徴
 
