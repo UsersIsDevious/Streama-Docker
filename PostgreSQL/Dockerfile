@@ -8,7 +8,7 @@ WORKDIR /app
 RUN apk add --no-cache curl
 
 # 使用する Streama のバージョンを指定
-ENV STREAMA_VERSION=1.9.0
+ENV STREAMA_VERSION=1.10.5
 
 # GitHub のリリースから Streama の jar ファイルをダウンロード
 RUN curl -L -o streama.jar https://github.com/streamaserver/streama/releases/download/v${STREAMA_VERSION}/streama-${STREAMA_VERSION}.jar
