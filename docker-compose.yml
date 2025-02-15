@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  streama:
+    image: streama
+    ports:
+      - "8080:8080"
+    volumes:
+      - /path/to/your/local/folder:/app/data
